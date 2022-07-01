@@ -17,7 +17,7 @@ const forecast = (lat, long, callback) => {
           body.current.temperature +
           " degrees out. But it feels like it is " +
           body.current.feelslike +
-          " degrees"
+          " degrees. " + "Humidity is " + body.current.humidity 
       );
     }
   });
