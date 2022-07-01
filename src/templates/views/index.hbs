@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Weather</title>
+    <link rel="icon" href="/img/weather.jpg"/>
+    <link rel="stylesheet" href="/css/styles.css" />
+    {{!-- <script src="/js/app.js"></script> --}}
+    {{!-- This JS script will run first before the below body element --}}
+  </head>
+
+  <body>
+    <div class="main-content"> 
+    {{>header}} 
+    <p>Use this site to get your weather</p>
+
+    <form>
+      <input placeholder="location">
+      <button>Search</button>
+    </form>
+
+    <p id="message-1"></p>
+    <p id="message-2"></p>
+    </div>
+     
+    {{!-- <h1>{{title}}</h1> --}}
+    {{!-- <p>{{name}}</p> --}}
+    {{>footer}}
+    <script src="/js/app.js"></script>
+    {{!-- the reason we put the script JS tag in here is we want to execute this JS
+    file after the body element / after form is submitted --}}
+  </body>
+</html>
