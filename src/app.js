@@ -10,6 +10,8 @@ console.log(path.join(__dirname, "../public"));
 
 const app = express(); // express is a function (not an object)
 
+const port = process.env.port || 3000;
+
 // Define paths for express config
 const publicDirectoryPath = path.join(__dirname, "../public");
 const viewsPath = path.join(__dirname, "/templates/views");
@@ -144,8 +146,8 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("Server is up on port 3000.");
+app.listen(port, () => {
+  console.log("Server is up on port: " + port );
 }); // to start the server up - common development port - 3000
 //  3000 is not a default port. once server starts, second argument - optional
 // - callback function will get called

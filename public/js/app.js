@@ -1,8 +1,8 @@
-fetch('http://puzzle.mead.io/puzzle').then((response)=>{
-    response.json().then((data)=>{
-     console.log(data);
-    })
-})
+// fetch('http://puzzle.mead.io/puzzle').then((response)=>{
+//     response.json().then((data)=>{
+//      console.log(data);
+//     })
+// })
 
 
 // fetch('http://localhost:3000/weather?address=!').then((response) => {
@@ -28,7 +28,8 @@ weatherForm.addEventListener('submit', (event) => {
     event.preventDefault(); // to prevent the default behaviour of the form. otherwise,
     // form will submit and refresh the page
     const location = search.value;
-    const url = 'http://localhost:3000/weather?address=' + encodeURIComponent(location);
+    // const url = 'http://localhost:3000/weather?address=' + encodeURIComponent(location);
+    const url = '/weather?address=' + encodeURIComponent(location);
     messageOne.textContent = 'Loading....';
     messageTwo.textContent = '';
     fetch(url).then((response) => {
